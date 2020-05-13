@@ -1,0 +1,34 @@
+[
+  {
+    "toplevel_name": "Customer favorites"
+  }, 
+      {
+        "url": "https://www.github.co.uk/", 
+        "name": "Customer Website"
+      },
+	        {
+        "url": "http://intranet/", 
+        "name": "Customer Intranet"
+      },
+	  	        {
+        "url": "https://Sharepoint.customer.co.uk/", 
+        "name": "Customer SharePoint "
+      },
+	  	  	        {
+        "url": "https://portal.manage.microsoft.com/", 
+        "name": "Customer Software Portal"
+      },
+  {
+    "name": "Microsoft Portals", 
+    "children": [
+      {
+        "url": "portal.office.com", 
+        "name": "Office 365"
+      }, 
+      {
+        "url": "https://myapplications.microsoft.com", 
+        "name": "MyApps"
+      }
+    ]
+  }
+]
