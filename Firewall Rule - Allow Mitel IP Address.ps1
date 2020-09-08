@@ -1,0 +1,1 @@
+﻿New-NetFirewallRule -Name "Mitel Workspace Scheduling" -DisplayName "Mitel Workspace Scheduling" -Enabled 1 -Direction Inbound -Action Allow -RemoteAddress "172.16.254.113" -Protocol TCP -Profile Domain
