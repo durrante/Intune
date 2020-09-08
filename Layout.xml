@@ -1,0 +1,39 @@
+<LayoutModificationTemplate xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout" Version="1" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification" xmlns:taskbar="http://schemas.microsoft.com/Start/2014/TaskbarLayout">
+  <LayoutOptions StartTileGroupCellWidth="6" />
+  <DefaultLayoutOverride LayoutCustomizationRestrictionType="OnlySpecifiedGroups">
+    <StartLayoutCollection>
+      <defaultlayout:StartLayout GroupCellWidth="6">
+        <start:Group Name="Office">
+          <start:DesktopApplicationTile Size="2x2" Column="0" Row="2" DesktopApplicationID="Microsoft.SkyDrive.Desktop" />
+          <start:DesktopApplicationTile Size="2x2" Column="2" Row="0" DesktopApplicationID="Microsoft.Office.WINWORD.EXE.15" />
+          <start:DesktopApplicationTile Size="2x2" Column="0" Row="0" DesktopApplicationID="Microsoft.Office.OUTLOOK.EXE.15" />
+          <start:DesktopApplicationTile Size="2x2" Column="4" Row="2" DesktopApplicationID="com.squirrel.Teams.Teams" />
+          <start:DesktopApplicationTile Size="2x2" Column="0" Row="4" DesktopApplicationID="Microsoft.Office.POWERPNT.EXE.15" />
+          <start:Tile Size="2x2" Column="2" Row="2" AppUserModelID="Microsoft.Office.OneNote_8wekyb3d8bbwe!microsoft.onenoteim" />
+          <start:DesktopApplicationTile Size="2x2" Column="4" Row="0" DesktopApplicationID="Microsoft.Office.EXCEL.EXE.15" />
+          <start:Tile Size="2x2" Column="2" Row="4" AppUserModelID="Microsoft.Todos_8wekyb3d8bbwe!App" />
+        </start:Group>
+        <start:Group Name="Explore">
+          <start:DesktopApplicationTile Size="2x2" Column="4" Row="2" DesktopApplicationID="C:\Servium\Splashtop_SOS\SplashtopSOS.exe" />
+          <start:DesktopApplicationTile Size="2x2" Column="0" Row="0" DesktopApplicationID="MSEdge" />
+          <start:DesktopApplicationTile Size="2x2" Column="2" Row="4" DesktopApplicationID="C:\Servium\Remote Desktop\SERVIUM Remote Desktop (03).rdp" />
+          <start:Tile Size="2x2" Column="0" Row="2" AppUserModelID="Microsoft.CompanyPortal_8wekyb3d8bbwe!App" />
+          <start:DesktopApplicationTile Size="2x2" Column="4" Row="0" DesktopApplicationID="Microsoft.Windows.Explorer" />
+          <start:DesktopApplicationTile Size="2x2" Column="2" Row="2" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe" />
+          <start:DesktopApplicationTile Size="2x2" Column="4" Row="4" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\Zoom\bin\Zoom.exe" />
+          <start:DesktopApplicationTile Size="2x2" Column="0" Row="4" DesktopApplicationID="C:\Servium\Remote Desktop\SERVIUM Remote Desktop (Pair).rdp" />
+          <start:DesktopApplicationTile Size="2x2" Column="2" Row="0" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\WatchGuard\WatchGuard Mobile VPN with SSL\wgsslvpnc.exe" />
+        </start:Group>
+      </defaultlayout:StartLayout>
+    </StartLayoutCollection>
+  </DefaultLayoutOverride>
+ <CustomTaskbarLayoutCollection PinListPlacement="Replace">
+<defaultlayout:TaskbarLayout>
+<taskbar:TaskbarPinList>
+<taskbar:DesktopApp DesktopApplicationID="Microsoft.Office.OUTLOOK.EXE.15" />
+<taskbar:DesktopApp DesktopApplicationID="MSEdge" />
+<taskbar:DesktopApp DesktopApplicationID="Microsoft.Windows.Explorer" />
+</taskbar:TaskbarPinList>
+</defaultlayout:TaskbarLayout>
+</CustomTaskbarLayoutCollection>
+</LayoutModificationTemplate>

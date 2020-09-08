@@ -1,0 +1,2 @@
+certutil -delstore trustedpublisher 04d54dc0a2016b263eeeb255d321056e
+certutil -delstore trustedpublisher 4d0fd6910c933cf2fee658026ceb157b
