@@ -5,8 +5,8 @@
     <aad>
       <audience>41b23e61-6c1e-4545-b367-cd054e0ed4b4</audience>
       <cachesigninuser>true</cachesigninuser>
-      <issuer>https://sts.windows.net/91bfa1fc-4d66-41e2-a256-d94a53097254/</issuer>
-      <tenant>https://login.microsoftonline.com/91bfa1fc-4d66-41e2-a256-d94a53097254/</tenant>
+      <issuer>https://sts.windows.net/<TENANTID>/</issuer>
+      <tenant>https://login.microsoftonline.com/<TENANTID>/</tenant>
     </aad>
     <cert
       i:nil="true" />
