@@ -1,0 +1,42 @@
+<AzVpnProfile xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/">
+  <any xmlns:d2p1="http://schemas.datacontract.org/2004/07/System.Xml"
+    i:nil="true" />
+  <clientauth>
+    <aad>
+      <audience>41b23e61-6c1e-4545-b367-cd054e0ed4b4</audience>
+      <cachesigninuser>true</cachesigninuser>
+      <issuer>https://sts.windows.net/91bfa1fc-4d66-41e2-a256-d94a53097254/</issuer>
+      <tenant>https://login.microsoftonline.com/91bfa1fc-4d66-41e2-a256-d94a53097254/</tenant>
+    </aad>
+    <cert
+      i:nil="true" />
+    <type>aad</type>
+    <usernamepass
+      i:nil="true" />
+  </clientauth>
+  <clientconfig
+    i:nil="true" />
+  <name>rpctychehub-vnet</name>
+  <protocolconfig>
+    <sslprotocolConfig>
+      <transportprotocol>tcp</transportprotocol>
+    </sslprotocolConfig>
+  </protocolconfig>
+  <serverlist>
+    <ServerEntry>
+      <displayname
+        i:nil="true" />
+      <fqdn>azuregateway-026b0072-3ef9-4993-b7a4-52fff5240ce6-049373fe73c7.vpn.azure.com</fqdn>
+    </ServerEntry>
+  </serverlist>
+  <servervalidation>
+    <cert>
+      <hash>A8985D3A65E5E5C4B2D7D66D40C6DD2FB19C5436</hash>
+      <issuer
+        i:nil="true" />
+    </cert>
+    <serversecret>fce462db0804d1e34de0725e7b48175517b9068393be8258eade6d469bec0059931d4c8509e728c0a217a79f99a085c303d626bd585e56baeb013b6394a6dfc7e0441403eee6515ba5766fcb6567c87bdde13584e78976588ba2f392d9954e496a7e6f7681b33dd17c597774812b3da9098e1622cad6183e720d1796365d7318095f976b8f0884850c1ac0fe7871d3eac6660b31c9c84580a78feb025976d17b5213a8d4f24d278d5d4e8306aa8324ac9f5320f3bac47c9d5b1578489f3476ccaae02873a3fc754d56f38e9d9f49bac29b55e935b7b4df7ba9fffd186d6b16440531232e748aa3b2dc530757c18332cc74b69104bdaf1778a1bbb248f494a513</serversecret>
+    <type>cert</type>
+  </servervalidation>
+  <version>1</version>
+</AzVpnProfile>
