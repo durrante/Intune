@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Use this script to bulk create common AAD dynamic groups for use within Microsoft Endpoint Manager (MEM)
 .DESCRIPTION
