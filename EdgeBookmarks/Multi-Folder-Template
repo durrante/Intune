@@ -1,0 +1,104 @@
+[
+  {
+    "toplevel_name": "Customer Favourites"
+  }, {
+    "name": "Applications", 
+    "children": [
+	      {
+        "url": "https://example.com", 
+        "name": "example URL"
+		},	  
+      {
+        "url": "https://example.com", 
+        "name": "example URL"
+		},	  
+      {
+        "url": "https://example.com", 
+        "name": "example URL"
+		},
+	  {
+        "url": "https://example.com", 
+        "name": "example URL"
+		},
+      {
+        "url": "https://example.com", 
+        "name": "example URL"
+		},
+      {
+        "url": "https://example.com", 
+        "name": "example URL"
+		},
+      {
+        "url": "https://example.com", 
+        "name": "example URL"
+		}
+    ]
+  },
+  {
+      "name": "Dell Support", 
+    "children": [
+      {
+        "url": "https://www.dell.com/support/home/en-uk", 
+        "name": "Dell UK"
+		}
+    ]
+  },
+  {
+    "name": "Office 365", 
+    "children": [
+	      {
+        "url": "https://portal.azure.com/", 
+        "name": "Azure Portal"
+		},	  
+      {
+        "url": "https://www.office.com/launch/excel", 
+        "name": "Excel"
+		},	  
+      {
+        "url": "https://www.office.com/?auth=2", 
+        "name": "Microsoft 365"
+		},
+      {
+        "url": "https://myapplications.microsoft.com", 
+        "name": "MyApplications"
+		},
+	  {
+        "url": "https://example.com", 
+        "name": "example URL"
+		},
+      {
+        "url": "https://www.office.com/launch/onenote?auth=2", 
+        "name": "OneNote"
+		},
+      {
+        "url": "https://outlook.office.com/mail/", 
+        "name": "Outlook"
+		},
+      {
+        "url": "https://www.office.com/launch/powerpoint", 
+        "name": "PowerPoint"
+		},
+      {
+        "url": "https://TENANTNAME.sharepoint.com/", 
+        "name": "SharePoint"
+		},
+      {
+        "url": "https://teams.microsoft.com/", 
+        "name": "Teams"
+		},
+      {
+        "url": "https://www.office.com/launch/word", 
+        "name": "Word"
+		}
+    ]
+  },
+  {
+    "name": "Okta", 
+    "children": [
+      {
+        "url": "https://example.com", 
+        "name": "example URL"
+	  }			
+    ]
+  }
+ ]
