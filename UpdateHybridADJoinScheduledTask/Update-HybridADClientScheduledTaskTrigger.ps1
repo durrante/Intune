@@ -21,5 +21,5 @@ if($taskExists) {
     Set-ScheduledTask -InputObject $TaskName
 } else {
    Write-output "$Task scheduled task does NOT exist on this device..."
-   
+   Exit 0   
 }
