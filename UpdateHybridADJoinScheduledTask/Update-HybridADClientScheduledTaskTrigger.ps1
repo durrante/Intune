@@ -4,7 +4,7 @@ Author:  Alex Durrant
 Script:  Update-HybridADClientScheduledTaskTrigger.ps1
 Date:    18/01/2023
 Description:
-Reconfigures the built-in Automatic-Device-Join scheduled task trigger for user logon only from 1 minute delay to 2 minutes if it exists, this is used for Hybrid AD join.
+Reconfigures the built-in Automatic-Device-Join scheduled task trigger for user logon only from 1 minute delay to 2 minutes if it exists, this is used for Hybrid AD join when pre-login VPN solutions either drop or reconnect on very first login.
 Release notes:
 Version 1.0: Original published version.
 The script is provided "AS IS" with no warranties.
