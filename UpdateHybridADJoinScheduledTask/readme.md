@@ -1,6 +1,6 @@
 # What does it do?
 
-Updates the in-built "Automatic-Device-Join" scheduled task @ Logon of any user from a default delay of 1-minute to 2 minutes. This may be required when pre-login VPNs drop \ reconnect at a critical point of the Autopilot Hybrid AD join process.
+Updates the in-built "Automatic-Device-Join" scheduled task @ Logon of any user from a default delay of 1-minute to 2-minutes. This may be required when pre-login VPNs drop \ reconnect at a critical point of the Autopilot Hybrid AD join process.
 
 # Before
 
