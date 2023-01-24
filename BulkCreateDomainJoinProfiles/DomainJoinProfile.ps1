@@ -20,7 +20,7 @@ Else {
 }
 
 ## Import CSV and variables
-$DomainOUs = Import-Csv -Path "D:\OneDrive\OneDrive - Alexdu\Work\M365\Intune\BulkCreateDomainJoinProfiles\DomainJoinProfileList.csv"
+$DomainOUs = Import-Csv -Path "<<YOUR CSV PATH>>"
 
 	
 #Importing Module
