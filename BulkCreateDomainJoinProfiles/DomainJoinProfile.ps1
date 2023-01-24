@@ -1,3 +1,6 @@
+## This script is based on the following blog article by Niels https://www.nielskok.tech/intune/domain-join-profile-intune-via-powershell/
+## V1.0
+
 
 [CmdletBinding()]
 param (
