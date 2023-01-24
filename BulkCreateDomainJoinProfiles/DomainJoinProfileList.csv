@@ -1,0 +1,5 @@
+﻿PolicyName,Assignment,ComputerNamePrefix,ActiveDirectoryFQDN,OUName
+Win10/11 - Domain Join - AvonAP- CLM,1cc63331-9b5a-40c4-b400-d7e04bd071d0,CLM,ap.avonet.net,"OU=Core,OU=Windows 10 Devices,OU=Workstations,OU=Devices,DC=letsconfigmgr,DC=com"
+Win10/11 - Domain Join - AvonEU - ALM,0da9ad60-9407-4f04-84ba-bc68e37fc32f,ALM,eu.avonet.net,"OU=Fid,OU=Windows 10 Devices,OU=Workstations,OU=Devices,DC=letsconfigmgr,DC=com"
+Win10/11 - Domain Join - AvonEU - BDP,b395a38e-a48e-40da-be01-e714df315451,BDP,eu.avonet.net,"OU=Fid Full,OU=Windows 10 Devices,OU=Workstations,OU=Devices,DC=letsconfigmgr,DC=com"
+Win10/11 - Domain Join - AvonNA - DLS,b073d35b-01ff-4882-8ade-99f0328a1d0a,DLS,na.avonet.net,"OU=Legal,OU=Windows 10 Devices,OU=Workstations,OU=Devices,DC=letsconfigmgr,DC=com"
