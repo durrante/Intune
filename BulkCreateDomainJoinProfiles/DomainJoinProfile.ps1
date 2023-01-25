@@ -36,7 +36,7 @@ $AuthToken = Get-MsalToken -ClientId d1ddf0e4-d672-4dae-b554-9d5bdfd93547 -Redir
 foreach($DomainOU in $DomainOUs)
 {	
 
-#Create Policy Parameter Object
+#Create Policy Parameter Object (Note: You may need to edit the computer name suffix char count depending on your current prefix, all must equal up to 15 characters for the script to be successful)
 $Profile = @{
 	"@odata.type" = "#microsoft.graph.windowsDomainJoinConfiguration";
     displayName = $DomainOU.PolicyName;
