@@ -16,7 +16,7 @@
 Import-Module ActiveDirectory
 
 $time = [DateTime]::Now.AddMinutes(-5)
-$computers = Get-ADComputer -Filter 'Name -like "*MSHDJ*"' 'Modified -ge $time' -SearchBase "OU=AutoPilotDevices,OU=Computers,DC=somedomain,DC=com" -Properties Created, Modified, userCertificate
+$computers = Get-ADComputer -Filter 'Name -like "*MSHDJ*" -and Modified -ge $time' -SearchBase "OU=AutoPilotDevices,OU=Computers,DC=somedomain,DC=com" -Properties Created, Modified, userCertificate
 
 If ($computers -ne $null) {
     ForEach ($computer in $computers) {
