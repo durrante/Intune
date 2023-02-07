@@ -50,7 +50,7 @@ foreach ($dc in $domainControllers) {
     # Try to find the computer object
     try {
         Clear-Variable "Computers" -ErrorAction SilentlyContinue
-        $computers = Get-ADComputer -Server $dc.HostName -Filter {((whenCreated -gt $timeLimit) -and (Name -like "*MSHDJ*")} -Properties Name, whenCreated, whenChanged, userCertificate
+        $computers = Get-ADComputer -Server $dc.HostName -Filter {((whenCreated -gt $timeLimit) -and (Name -like "*MSHDJ*"))} -Properties Name, whenCreated, whenChanged, userCertificate
         if ($computers) {
             $computers = $computers | Where-Object { $_.userCertificate -ne $null }
             foreach ($computer in $computers) {
