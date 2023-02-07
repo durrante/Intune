@@ -6,7 +6,7 @@
     if this is TRUE, then another check will run to see if the userCertificate attribute is present and if so, replicate the object from the source DC to the destination
     DC for which AADConnect is configured to look at, once the replication has completed, AADConnect delta sync will be triggered. 
     
-    Script will also delete .log files in the C:\scripts\AutopilotLogs directory if over 90 days old too.
+    Script will log all events to c:\scripts\autopilotlogs and will also delete .log files in the C:\scripts\AutopilotLogs directory if over 90 days old too.
     
     Ensure that you update the targetdc, targetdomain and on line 50 the device name filter to match your environment.
     
