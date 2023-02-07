@@ -43,7 +43,7 @@ $now = Get-Date
 $timeLimit = $now.AddMinutes(-120)
 
 # Set the log file path
-$logFile = "C:\scripts\AutopilotADDeviceReplicationObject_" + $now.ToString("ddMMyyyy") + ".log"
+$logFile = "C:\scripts\AutopilotLogs\AutopilotADDeviceReplicationObject_" + $now.ToString("ddMMyyyy") + ".log"
 
 # Loop through each DC
 foreach ($dc in $domainControllers) {
