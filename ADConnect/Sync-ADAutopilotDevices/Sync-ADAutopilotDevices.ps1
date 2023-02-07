@@ -2,9 +2,11 @@
 .SYNOPSIS
     Finds AD Object on the specified domain, replicates the object to a specific DC and then triggers an AAD Connect sync cycle.
 .DESCRIPTION
-    This script will find ADObjects within the specified domain that have either been created, modified within the last 10 minutes with a device name containing "MSHDJ",
+    This script will find ADObjects within the specified domain that have been created within the last 120 minutes with a device name containing "MSHDJ",
     if this is TRUE, then another check will run to see if the userCertificate attribute is present and if so, replicate the object from the source DC to the destination
-    DC for which AADConnect is configured to look at, once the replication has completed, AADConnect delta sync will be triggered.
+    DC for which AADConnect is configured to look at, once the replication has completed, AADConnect delta sync will be triggered. 
+    
+    Script will also delete .log files in the C:\scripts\AutopilotLogs directory if over 90 days old too.
     
     Ensure that you update the targetdc, targetdomain and on line 50 the device name filter to match your environment.
     
@@ -37,18 +39,18 @@ $domainControllers = Get-ADDomainController -Filter * -Server $targetDomain
 # Get the current time
 $now = Get-Date
 
-# Calculate the time 10 minutes ago
-$timeLimit = $now.AddMinutes(-10)
+# Calculate the time 120 minutes ago
+$timeLimit = $now.AddMinutes(-120)
 
 # Set the log file path
-$logFile = "C:\scripts\AutopilotADDeviceReplicationObject.log"
+$logFile = "C:\scripts\AutopilotADDeviceReplicationObject_" + $now.ToString("ddMMyyyy") + ".log"
 
 # Loop through each DC
 foreach ($dc in $domainControllers) {
     # Try to find the computer object
     try {
         Clear-Variable "Computers" -ErrorAction SilentlyContinue
-        $computers = Get-ADComputer -Server $dc.HostName -Filter {((whenCreated -gt $timeLimit) -or (whenChanged -gt $timeLimit)) -and (Name -like "*MSHDJ*")} -Properties Name, whenCreated, whenChanged, userCertificate
+        $computers = Get-ADComputer -Server $dc.HostName -Filter {((whenCreated -gt $timeLimit) -and (Name -like "*MSHDJ*")} -Properties Name, whenCreated, whenChanged, userCertificate
         if ($computers) {
             $computers = $computers | Where-Object { $_.userCertificate -ne $null }
             foreach ($computer in $computers) {
@@ -74,3 +76,8 @@ foreach ($dc in $domainControllers) {
         Write-Output "$(Get-Date -Format "dd-MM-yyyy HH:mm:ss") Error searching on $($dc.HostName): $_" | Out-File -FilePath $logFile -Append
     }
 }
+
+# Deletes .log files in the c:\scripts\AutopilotLogs directory if created over 90 days ago and log file name contains 'Autopilot'
+Get-ChildItem -Path "C:\scripts\AutopilotLogs" -Recurse -Include *.log |
+Where-Object { ($_.CreationTime -lt (Get-Date).AddDays(-90)) -and ($_.Name -like "*autopilot*") } |
+Remove-Item
