@@ -5,6 +5,9 @@
     This script will find ADObjects within the specified domain that have either been created, modified within the last 10 minutes with a device name containing "MSHDJ",
     if this is TRUE, then another check will run to see if the userCertificate attribute is present and if so, replicate the object from the source DC to the destination
     DC for which AADConnect is configured to look at, once the replication has completed, AADConnect delta sync will be triggered.
+    
+    Ensure that you update the targetdc, targetdomain and on line 50 the device name filter to match your environment.
+    
 .NOTES
     FileName:    Sync-ADAutopilotDevices.ps1
     Author:      Alex Durrant
