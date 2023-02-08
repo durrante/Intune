@@ -58,25 +58,29 @@ foreach ($dc in $domainControllers) {
                 # Trigger replication to the target DC
                     Sync-ADObject -Source $dc.HostName -Destination $targetDC -Object $computer.DistinguishedName
                     Write-Output "$(Get-Date -Format "dd-MM-yyyy HH:mm:ss") Successfully replicated $($computer.Name) object to $targetDC" | Out-File -FilePath $logFile -Append
-                # Sleep for 60 seconds to allow for AD Replication
-                Start-Sleep -Seconds 60
-                # Trigger AAD Connect delta sync if NOT already running
-                $status = Get-ADSyncScheduler
-                    if ($status.SyncCycleInProgress -eq $false) {
-                        Start-ADSyncSyncCycle -PolicyType Delta
-                        Write-Output "$(Get-Date -Format "dd-MM-yyyy HH:mm:ss") Starting AAD Connect sync cycle for $($Computer.name)" | Out-File -FilePath $logFile -Append
-                    }
-                    else {
-                        Write-Output "$(Get-Date -Format "dd-MM-yyyy HH:mm:ss") AAD Connect sync cycle is already running" | Out-File -FilePath $logFile -Append
-                    }                
-            }
-        }
-    break
+					}
+                }
+		    break
 	} catch {
         Write-Output "$(Get-Date -Format "dd-MM-yyyy HH:mm:ss") Error searching on $($dc.HostName): $_" | Out-File -FilePath $logFile -Append
-    }
-}
+			}		
+		}
 
+        # Wait 60 seconds for replication and trigger AADConnect if any computers were in scope.
+         if ($computers -ne $null) {
+			# Sleep for 60 seconds to allow for AD Replication
+            Start-Sleep -Seconds 60
+			# Trigger AAD Connect delta sync if NOT already running
+			$status = Get-ADSyncScheduler
+               if ($status.SyncCycleInProgress -eq $false) {
+                  Start-ADSyncSyncCycle -PolicyType Delta
+                  Write-Output "$(Get-Date -Format "dd-MM-yyyy HH:mm:ss") Starting AAD Connect sync cycle." | Out-File -FilePath $logFile -Append
+                    }
+                    else {
+                  Write-Output "$(Get-Date -Format "dd-MM-yyyy HH:mm:ss") AAD Connect sync cycle is already running" | Out-File -FilePath $logFile -Append
+                    }                
+            }
+     
 # Deletes .log files in the c:\scripts\AutopilotLogs directory if created over 90 days ago and log file name contains 'Autopilot'
 Get-ChildItem -Path "C:\scripts\AutopilotLogs" -Recurse -Include *.log |
 Where-Object { ($_.CreationTime -lt (Get-Date).AddDays(-90)) -and ($_.Name -like "*autopilot*") } |
