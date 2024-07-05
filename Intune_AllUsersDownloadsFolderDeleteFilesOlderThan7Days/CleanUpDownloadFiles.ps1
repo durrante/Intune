@@ -1,8 +1,7 @@
 <#  Script to delete files older than 7 days in all user download directories
 	Does not apply to public or administrator accounts
 
-    HybrIT Services 2024 Copyright
-	Author: Alex Durrant
+ 	Author: Alex Durrant
 	Version: V1.0
 	
     Unless required by applicable law or agreed to in writing, software
