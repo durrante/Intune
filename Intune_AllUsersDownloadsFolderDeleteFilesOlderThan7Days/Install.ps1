@@ -1,7 +1,7 @@
 $Scriptname = "CleanUpDownloadFiles.ps1" #name of the script to run in the scheduled task. Put in to root folder of this package.
 $Foldername = "ScheduledTasks" #Foldername in C:\Program Files\
 $ScheduledTaskUser = "SYSTEM" #This is the user that is used to run the scheduled task, default set as system
-$ScheduledTaskName = "HybrIT_DeleteAllUserDownloadsFilesOlderThan7Days" #name of the scheduled task
+$ScheduledTaskName = "DeleteAllUserDownloadsFilesOlderThan7Days" #name of the scheduled task
 $ScheduledTime = "AtLogOn" #use "AtLogOn" or a time in format (example): 15:00 to run it at 3 pm
 
 #Start Logging
