@@ -1,4 +1,4 @@
-$ScheduledTaskName = "HybrIT_DeleteAllUserDownloadsFilesOlderThan7Days" #name of the scheduled task
+$ScheduledTaskName = "DeleteAllUserDownloadsFilesOlderThan7Days" #name of the scheduled task
 
 $Task = Get-ScheduledTask -TaskName $ScheduledTaskName -ErrorAction SilentlyContinue -OutVariable task
 
